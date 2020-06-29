@@ -13,10 +13,10 @@ module.exports = {
   // This is where we define the path where Webpack will place
   // the bundled JS file
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, 'docs'),
     // Specify the base path for all the assets within your
     // application. This is relative to the output path, so in
-    // our case it will be ./public/assets
+    // our case it will be ./docs/assets
     publicPath: '/assets',
     // The name of the output bundle. Path is also relative
     // to the output path
@@ -83,7 +83,7 @@ module.exports = {
               // Indicates where the images are stored and will use
               // this path when generating the CSS files.
               // Example, in main.scss I have
-              // url('../../public/assets/images/venice-italy.jpg')
+              // url('../../docs/assets/images/venice-italy.jpg')
               // and when generating the CSS file, it will be
               // outputted as url(../images/venice-italy.jpg), which
               // is relative to /styles/main.css
