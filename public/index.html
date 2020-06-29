@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>VOXL</title>
+  <link rel="stylesheet" href="./assets/styles/main.css">
+  <script src="./assets/scripts/bundle.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="columns" id="ui_current_location" x-data="current_location">
+    <div class="column col-1">TS</div>
+    <div class="column col-11" x-text="tt"></div>
+    <div class="column col-1">X</div>
+    <div class="column col-11" x-bind:class="status" x-text="tx"></div>
+    <div class="column col-1">Y</div>
+    <div class="column col-11" x-bind:class="status" x-text="ty"></div>
+    <div class="column col-1">Z</div>
+    <div class="column col-11" x-bind:class="status" x-text="tz"></div>
+    <div class="column col-1">AC</div>
+    <div class="column col-11" x-text="accuracy"></div>
+    <div class="column col-1">AA</div>
+    <div class="column col-11" x-text="altitudeAccuracy"></div>
+    <div class="column col-1">HD</div>
+    <div class="column col-11" x-text="heading"></div>
+    <div class="column col-1">SP</div>
+    <div class="column col-11" x-text="speed"></div>
+    <div class="column col-1"></div><div class="column col-4"><button type="button" id="bt_start" class="btn btn-lg btn-success">&nbsp;&nbsp;Go&nbsp;&nbsp;</button></div>
+  </div>
+  <span x-text="_dummy"></span>
+</div>
+
+</body>
+</html>

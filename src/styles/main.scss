@@ -1,0 +1,10 @@
+@import '~spectre.css/dist/spectre.css';
+@import '~spectre.css/dist/spectre-exp.css';
+@import '~spectre.css/dist/spectre-icons.css';
+
+html {
+  font-size: 1.0em;
+}
+html,body {
+  font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace;
+}
