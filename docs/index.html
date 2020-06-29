@@ -27,7 +27,14 @@
     <div class="column col-11" x-text="heading"></div>
     <div class="column col-1">SP</div>
     <div class="column col-11" x-text="speed"></div>
-    <div class="column col-1"></div><div class="column col-4"><button type="button" id="bt_start" class="btn btn-lg btn-success">&nbsp;&nbsp;Go&nbsp;&nbsp;</button></div>
+    <div class="column col-1"></div>
+    <div class="column col-4">
+      <button type="button"
+              id="bt_start"
+              class="btn btn-lg"
+              x-bind:class="{'bg-success':!running, 'bg-error':running}"
+              x-text="running?'&nbsp;&nbsp;STOP&nbsp;&nbsp;':'&nbsp;&nbsp;START&nbsp;&nbsp;'"></button>
+    </div>
   </div>
   <span x-text="_dummy"></span>
 </div>
