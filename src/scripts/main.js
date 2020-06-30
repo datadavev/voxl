@@ -2,6 +2,13 @@ import 'alpinejs';
 import * as numeral from 'numeral';
 import proj4 from 'proj4';
 
+/*
+TODO:
+- add pouchdb connection
+- capture point and description to pouch db
+- enable pouchdb sync to beehivebeach
+ */
+
 //proj4.defs('WGS84', "+title=WGS 84 (long/lat) +proj=longlat +ellps=WGS84 +datum=WGS84 +units=degrees");
 const EPSG_2893 = '+title=NAD83(HARN)/Maryland(ftUS) +proj=lcc +lat_1=39.45 +lat_2=38.3 +lat_0=37.66666666666666 +lon_0=-77 +x_0=399999.9998983998 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=us-ft +no_defs';
 
@@ -35,6 +42,8 @@ window.current_location = {
 
 
 function transformLocation(longitude, latitude) {
+  latitude=39.026995046;
+  longitude=-76.563978568;
   let xy = proj4(config.projection).forward([longitude, latitude])
   console.debug(xy);
   return xy;

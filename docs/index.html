@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:x-bind="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,29 +11,47 @@
 <body>
 <div class="container">
   <div class="columns" id="ui_current_location" x-data="current_location">
-    <div class="column col-1">TS</div>
-    <div class="column col-11" x-text="tt"></div>
-    <div class="column col-1">X</div>
-    <div class="column col-11" x-bind:class="status"><strong x-text="tx"></strong></div>
-    <div class="column col-1">Y</div>
-    <div class="column col-11" x-bind:class="status"><strong x-text="ty"></strong></div>
-    <div class="column col-1">Z</div>
-    <div class="column col-11" x-bind:class="status"><strong x-text="tz"></strong></div>
-    <div class="column col-1">AC</div>
-    <div class="column col-11" x-text="accuracy"></div>
-    <div class="column col-1">AA</div>
-    <div class="column col-11" x-text="altitudeAccuracy"></div>
-    <div class="column col-1">HD</div>
-    <div class="column col-11" x-text="heading"></div>
-    <div class="column col-1">SP</div>
-    <div class="column col-11" x-text="speed"></div>
     <div class="column col-1"></div>
-    <div class="column col-4">
+    <div class="column col-11">
       <button type="button"
               id="bt_start"
               class="btn btn-lg"
               x-bind:class="{'bg-success':!running, 'bg-error':running}"
               x-text="running?'&nbsp;&nbsp;STOP&nbsp;&nbsp;':'&nbsp;&nbsp;START&nbsp;&nbsp;'"></button>
+    </div>
+    <div class="column col-1">TS</div>
+    <div class="column col-10" x-text="tt"></div>
+    <div class="column col-1"></div>
+    <div class="column col-1">X</div>
+    <div class="column col-10" x-bind:class="status"><strong x-text="tx"></strong></div>
+    <div class="column col-1"></div>
+    <div class="column col-1">Y</div>
+    <div class="column col-10" x-bind:class="status"><strong x-text="ty"></strong></div>
+    <div class="column col-1"></div>
+    <div class="column col-1">Z</div>
+    <div class="column col-10" x-bind:class="status"><strong x-text="tz"></strong></div>
+    <div class="column col-1"></div>
+    <div class="column col-1">AC</div>
+    <div class="column col-10" x-text="accuracy"></div>
+    <div class="column col-1"></div>
+    <div class="column col-1">AA</div>
+    <div class="column col-10" x-text="altitudeAccuracy"></div>
+    <div class="column col-1"></div>
+    <div class="column col-1">HD</div>
+    <div class="column col-10" x-text="heading"></div>
+    <div class="column col-1"></div>
+    <div class="column col-1">SP</div>
+    <div class="column col-10" x-text="speed"></div>
+    <div class="column col-1"></div>
+    <div class="column col-12">
+      <textarea id="ta_description" rows="5" cols="40"></textarea>
+    </div>
+    <div class="column col-1"></div>
+    <div class="column col-4">
+      <button type="button"
+              id="bt_capture"
+              class="btn btn-lg"
+              x-bind:class="{'bg-success':running, 'bg-secondary':!running, 'text-gray':!running}">&nbsp;Capture&nbsp;</button>
     </div>
   </div>
   <span x-text="_dummy"></span>
